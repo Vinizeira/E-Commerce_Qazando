@@ -1,0 +1,14 @@
+{
+  "name": "qazando-shop",
+  "version": "1.0.0",
+  "description": "Projeto de teste automatizado no QAZANDO Shop",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open"
+  },
+  "author": "Vinizeira",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^9.4.1"
+  }
+}

@@ -2,26 +2,43 @@ import acessPage from '../pages/acessPage'
 import fixPages from '../pages/fixPages'
 
 describe('Acesso a home', () => {
-     it.skip('Acessando a home', function() {
+
+     it('Elementos homePage ', function() {
         acessPage.go()
         acessPage.navegandoPelaHome()
        acessPage.grindProductVideo()
      })
 
-     beforeEach(function() { //Função para pegar as fixtures
-         cy.fixture('users').then((u)=> {
-            this.users = u
-         }) 
-     })
+    }) 
 
-    it('Layout Fixo', function() {
+describe('Fix elements', ()=> {
+    beforeEach(function() { //Função para pegar as fixtures
+     cy.fixture('produtos').then((p)=> {
+            this.produtos = p
+         }) 
+    })
+
+    it('Cabeçalho Links ', function() {
         fixPages.go()
         //fixPages.go(this.users.usuario) Exemplo para chamar fixtures
-        fixPages.header()
+        fixPages.header()       
+    })
+
+    
+    it('Favoritos:Excluir Itens', function() {
         fixPages.favorites()
+    })
+
+    it('Carrinho: Excluir Itens', function() {
         fixPages.shopCart()
-        fixPages.searchButton()
     })
     
-}) 
+    it('Pesquisar', function() {
+        fixPages.go()
+        fixPages.searchButton(this.produtos.produto)
+    })
+
+})
+
+
 

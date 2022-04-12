@@ -1,7 +1,9 @@
 {
     "usuario":{
         "nome": "Vinicius",
-        "vini" : "Vini"           
+        "username" : "Vini",
+        "email" : "email@gmail.com",
+        "password":"123"           
         }
         
     
